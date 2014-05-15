@@ -22,7 +22,7 @@ vector<int> BinaryTreeSort::Sort(const vector<int>& vectorToSort)
 void BinaryTreeSort::ReadTree(const shared_ptr<BinaryTreeNode> node, vector<int>& sortedVector)
 {
 	shared_ptr<BinaryTreeNode> temp = node;
-	if (temp == NULL)
+	if (temp == nullptr)
 	{
 		return;
 	}

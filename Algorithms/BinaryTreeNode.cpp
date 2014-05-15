@@ -20,14 +20,14 @@ int BinaryTreeNode::GetValue()
 
 void BinaryTreeNode::Insert(int value)
 {
-	if (_leftNode == NULL && _rightNode == NULL && _valueSet == false)
+	if (_leftNode == nullptr && _rightNode == nullptr && _valueSet == false)
 	{
 		_value = value;
 		_valueSet = true;
 	}
 	else if (value < _value)
 	{
-		if (_leftNode == NULL)
+		if (_leftNode == nullptr)
 		{
 			_leftNode = make_shared<BinaryTreeNode>(value);
 		}
@@ -38,7 +38,7 @@ void BinaryTreeNode::Insert(int value)
 	}
 	else
 	{
-		if (_rightNode == NULL)
+		if (_rightNode == nullptr)
 		{
 			_rightNode = make_shared<BinaryTreeNode>(value);
 		}
