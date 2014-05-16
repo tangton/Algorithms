@@ -7,6 +7,7 @@
 #include <string>
 #include "SelectionSort.h"
 #include "BinaryTreeSort.h"
+#include "MergeSort.h"
 
 using namespace algorithms;
 using namespace std;
@@ -40,6 +41,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	vector<int> binaryTreeSortSortedVector = BinaryTreeSort::Sort(vectorToSort);
 	printToConsole(binaryTreeSortSortedVector, "Vector sorted by Binary Tree Sort");
+
+	vector<int> mergeSortSortedVector = MergeSort::Sort(vectorToSort);
+	printToConsole(mergeSortSortedVector, "Vector sorted by Merge Sort");
 
 	return 0;
 }

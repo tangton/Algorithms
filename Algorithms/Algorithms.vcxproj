@@ -13,11 +13,13 @@
   <ItemGroup>
     <ClInclude Include="BinaryTreeNode.h" />
     <ClInclude Include="BinaryTreeSort.h" />
+    <ClInclude Include="MergeSort.h" />
     <ClInclude Include="SelectionSort.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinaryTreeNode.cpp" />
     <ClCompile Include="BinaryTreeSort.cpp" />
+    <ClCompile Include="MergeSort.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

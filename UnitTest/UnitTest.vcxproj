@@ -83,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BinaryTreeSortTest.cpp" />
+    <ClCompile Include="MergeSortTest.cpp" />
     <ClCompile Include="SelectionSortTest.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -30,6 +30,9 @@
     <ClInclude Include="BinaryTreeNode.h">
       <Filter>Header Files\BinaryTree</Filter>
     </ClInclude>
+    <ClInclude Include="MergeSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SelectionSort.cpp">
@@ -40,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="BinaryTreeNode.cpp">
       <Filter>Source Files\BinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeSort.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
