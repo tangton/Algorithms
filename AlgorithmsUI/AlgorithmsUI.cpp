@@ -8,6 +8,8 @@
 #include "SelectionSort.h"
 #include "BinaryTreeSort.h"
 #include "MergeSort.h"
+#include "GraphNode.h"
+#include "GraphSearch.h"
 
 using namespace algorithms;
 using namespace std;
@@ -33,6 +35,26 @@ int _tmain(int argc, _TCHAR* argv[])
 	vectorToSort.push_back(3);
 	vectorToSort.push_back(11);
 	vectorToSort.push_back(5);
+	vectorToSort.push_back(11);
+	vectorToSort.push_back(5);
+	vectorToSort.push_back(51);
+	vectorToSort.push_back(5);
+	vectorToSort.push_back(11);
+	vectorToSort.push_back(566);
+	vectorToSort.push_back(11);
+	vectorToSort.push_back(5);
+	vectorToSort.push_back(112);
+	vectorToSort.push_back(35);
+	vectorToSort.push_back(11);
+	vectorToSort.push_back(75);
+	vectorToSort.push_back(11);
+	vectorToSort.push_back(5);
+	vectorToSort.push_back(121);
+	vectorToSort.push_back(5);
+	vectorToSort.push_back(311);
+	vectorToSort.push_back(52);
+	vectorToSort.push_back(11);
+	vectorToSort.push_back(5);
 	vectorToSort.push_back(1);
 	printToConsole(vectorToSort, "Vector unsorted");
 
@@ -44,6 +66,30 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	vector<int> mergeSortSortedVector = MergeSort::Sort(vectorToSort);
 	printToConsole(mergeSortSortedVector, "Vector sorted by Merge Sort");
+
+	shared_ptr<GraphNode> graphNode1 = make_shared<GraphNode>(1);
+	shared_ptr<GraphNode> graphNode2 = make_shared<GraphNode>(2);
+	shared_ptr<GraphNode> graphNode3 = make_shared<GraphNode>(3);
+	shared_ptr<GraphNode> graphNode4 = make_shared<GraphNode>(4);
+	shared_ptr<GraphNode> graphNode5 = make_shared<GraphNode>(5);
+
+	graphNode1->AddRelationship(graphNode2);
+	graphNode1->AddRelationship(graphNode3);
+	graphNode1->AddRelationship(graphNode4);
+
+	graphNode2->AddRelationship(graphNode1);
+	graphNode2->AddRelationship(graphNode4);
+
+	graphNode3->AddRelationship(graphNode1);
+	
+	graphNode4->AddRelationship(graphNode1);
+	graphNode4->AddRelationship(graphNode2);
+	graphNode4->AddRelationship(graphNode5);
+
+	graphNode5->AddRelationship(graphNode4);
+
+	vector<int> breadthFirstSearchResult = GraphSearch::RunBreadthFirstSearch(graphNode1);
+	printToConsole(breadthFirstSearchResult, "Breadth First Search");
 
 	return 0;
 }

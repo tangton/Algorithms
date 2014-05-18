@@ -19,6 +19,12 @@
     <Filter Include="Source Files\BinaryTree">
       <UniqueIdentifier>{ee3ed6e2-ebf1-4c44-a3a9-3a09105d14e0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Graph">
+      <UniqueIdentifier>{3819c8db-2dd4-4217-a43d-28306771c582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graph">
+      <UniqueIdentifier>{d838e4bc-31e4-4e8d-a7d1-7d7f4a404009}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SelectionSort.h">
@@ -33,6 +39,12 @@
     <ClInclude Include="MergeSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GraphNode.h">
+      <Filter>Header Files\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SelectionSort.cpp">
@@ -45,6 +57,12 @@
       <Filter>Source Files\BinaryTree</Filter>
     </ClCompile>
     <ClCompile Include="MergeSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphNode.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphSearch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
