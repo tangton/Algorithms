@@ -72,24 +72,40 @@ int _tmain(int argc, _TCHAR* argv[])
 	shared_ptr<GraphNode> graphNode3 = make_shared<GraphNode>(3);
 	shared_ptr<GraphNode> graphNode4 = make_shared<GraphNode>(4);
 	shared_ptr<GraphNode> graphNode5 = make_shared<GraphNode>(5);
+	shared_ptr<GraphNode> graphNode6 = make_shared<GraphNode>(6);
+	shared_ptr<GraphNode> graphNode7 = make_shared<GraphNode>(7);
+	shared_ptr<GraphNode> graphNode8 = make_shared<GraphNode>(8);
 
 	graphNode1->AddRelationship(graphNode2);
-	graphNode1->AddRelationship(graphNode3);
 	graphNode1->AddRelationship(graphNode4);
+	graphNode1->AddRelationship(graphNode7);
 
-	graphNode2->AddRelationship(graphNode1);
-	graphNode2->AddRelationship(graphNode4);
+	graphNode2->AddRelationship(graphNode5);
+	graphNode2->AddRelationship(graphNode6);
 
-	graphNode3->AddRelationship(graphNode1);
+	graphNode3->AddRelationship(graphNode6);
+	graphNode3->AddRelationship(graphNode8);
 	
 	graphNode4->AddRelationship(graphNode1);
-	graphNode4->AddRelationship(graphNode2);
-	graphNode4->AddRelationship(graphNode5);
+	graphNode4->AddRelationship(graphNode6);
 
-	graphNode5->AddRelationship(graphNode4);
+	graphNode5->AddRelationship(graphNode2);
+	graphNode5->AddRelationship(graphNode7);
+
+	graphNode6->AddRelationship(graphNode2);
+	graphNode6->AddRelationship(graphNode3);
+	graphNode6->AddRelationship(graphNode4);
+
+	graphNode7->AddRelationship(graphNode1);
+	graphNode7->AddRelationship(graphNode5);
+
+	graphNode8->AddRelationship(graphNode3);
 
 	vector<int> breadthFirstSearchResult = GraphSearch::RunBreadthFirstSearch(graphNode1);
 	printToConsole(breadthFirstSearchResult, "Breadth First Search");
+
+	vector<int> deepthFirstSearchResult = GraphSearch::RunDepthFirstSearch(graphNode1);
+	printToConsole(deepthFirstSearchResult, "Deepth First Search");
 
 	return 0;
 }

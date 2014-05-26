@@ -1,7 +1,6 @@
 #pragma once
 
 #include "GraphNode.h"
-#include <queue>
 
 namespace algorithms
 {
@@ -9,5 +8,6 @@ namespace algorithms
 	{
 	public:
 		static std::vector<int> RunBreadthFirstSearch(const std::shared_ptr<GraphNode>& graphNode);
+		static std::vector<int> RunDepthFirstSearch(const std::shared_ptr<GraphNode>& graphNode);
 	};
 }
