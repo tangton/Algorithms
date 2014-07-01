@@ -84,6 +84,7 @@
   <ItemGroup>
     <ClCompile Include="BinaryTreeSortTest.cpp" />
     <ClCompile Include="GraphSearchTest.cpp" />
+    <ClCompile Include="LinkedListTest.cpp" />
     <ClCompile Include="MergeSortTest.cpp" />
     <ClCompile Include="SelectionSortTest.cpp" />
   </ItemGroup>

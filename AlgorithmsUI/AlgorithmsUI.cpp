@@ -10,6 +10,7 @@
 #include "MergeSort.h"
 #include "GraphNode.h"
 #include "GraphSearch.h"
+#include "LinkedListNode.h"
 
 using namespace algorithms;
 using namespace std;
@@ -27,7 +28,7 @@ void printToConsole(const vector<int>& vectorToPrint, const string& title)
 	cout << vectorContents << endl << endl;
 }
 
-int _tmain(int argc, _TCHAR* argv[])
+void RunSortingAlgorithms()
 {
 	vector<int> vectorToSort;
 	vectorToSort.push_back(1);
@@ -66,7 +67,10 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	vector<int> mergeSortSortedVector = MergeSort::Sort(vectorToSort);
 	printToConsole(mergeSortSortedVector, "Vector sorted by Merge Sort");
+}
 
+void RunGraphAlgorithms()
+{
 	shared_ptr<GraphNode> graphNode1 = make_shared<GraphNode>(1);
 	shared_ptr<GraphNode> graphNode2 = make_shared<GraphNode>(2);
 	shared_ptr<GraphNode> graphNode3 = make_shared<GraphNode>(3);
@@ -85,7 +89,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	graphNode3->AddRelationship(graphNode6);
 	graphNode3->AddRelationship(graphNode8);
-	
+
 	graphNode4->AddRelationship(graphNode1);
 	graphNode4->AddRelationship(graphNode6);
 
@@ -106,6 +110,57 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	vector<int> deepthFirstSearchResult = GraphSearch::RunDepthFirstSearch(graphNode1);
 	printToConsole(deepthFirstSearchResult, "Deepth First Search");
+}
+
+void RunLinkedListAlgorithms()
+{
+	shared_ptr<LinkedListNode> node1 = make_shared<LinkedListNode>(1);
+	shared_ptr<LinkedListNode> node2 = make_shared<LinkedListNode>(2);
+	shared_ptr<LinkedListNode> node3 = make_shared<LinkedListNode>(3);
+	shared_ptr<LinkedListNode> node4 = make_shared<LinkedListNode>(4);
+	shared_ptr<LinkedListNode> node5 = make_shared<LinkedListNode>(5);
+
+	node1->SetNext(node2);
+	node2->SetNext(node3);
+	node3->SetNext(node4);
+	node4->SetNext(node5);
+
+	shared_ptr<LinkedListNode> node = node1;
+	string contents;
+
+	cout << "Linked List" << endl;
+	while (node != nullptr)
+	{
+		contents.append(to_string(node->GetValue()));
+		contents.append(", ");
+
+		node = node->GetNext();
+	}
+
+	contents.erase(contents.length() - 2);
+	cout << contents << endl << endl;
+
+	node = LinkedListNode::ReverseLinkedList(node1);
+
+	cout << "Linked List Reversed" << endl;
+	contents.clear();
+	while (node != nullptr)
+	{
+		contents.append(to_string(node->GetValue()));
+		contents.append(", ");
+
+		node = node->GetNext();
+	}
+
+	contents.erase(contents.length() - 2);
+	cout << contents << endl << endl;
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	RunSortingAlgorithms();
+	RunGraphAlgorithms();
+	RunLinkedListAlgorithms();
 
 	return 0;
 }

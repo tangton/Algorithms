@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Graph">
       <UniqueIdentifier>{d838e4bc-31e4-4e8d-a7d1-7d7f4a404009}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\LinkedList">
+      <UniqueIdentifier>{c8c74d6d-3361-4175-a8ec-8b62dbd5c719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LinkedList">
+      <UniqueIdentifier>{1579e281-7fd9-46da-8d62-6609c84cf63c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SelectionSort.h">
@@ -45,6 +51,9 @@
     <ClInclude Include="GraphSearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedListNode.h">
+      <Filter>Header Files\LinkedList</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SelectionSort.cpp">
@@ -64,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="GraphSearch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListNode.cpp">
+      <Filter>Source Files\LinkedList</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
