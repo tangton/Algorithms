@@ -156,12 +156,42 @@ void RunLinkedListAlgorithms()
 	cout << contents << endl << endl;
 }
 
+void RunLinkedListAlgorithmDeleteNode()
+{
+	shared_ptr<LinkedListNode> node1 = make_shared<LinkedListNode>(1);
+	shared_ptr<LinkedListNode> node2 = make_shared<LinkedListNode>(2);
+	shared_ptr<LinkedListNode> node3 = make_shared<LinkedListNode>(3);
+	shared_ptr<LinkedListNode> node4 = make_shared<LinkedListNode>(4);
+	shared_ptr<LinkedListNode> node5 = make_shared<LinkedListNode>(5);
+
+	node1->SetNext(node2);
+	node2->SetNext(node3);
+	node3->SetNext(node4);
+	node4->SetNext(node5);
+
+	shared_ptr<LinkedListNode> node = LinkedListNode::DeleteNode(node1, 3);
+
+	cout << "Linked List - Delete 3" << endl;
+	string contents;
+
+	while (node != nullptr)
+	{
+		contents.append(to_string(node->GetValue()));
+		contents.append(", ");
+
+		node = node->GetNext();
+	}
+
+	contents.erase(contents.length() - 2);
+	cout << contents << endl << endl;
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	RunSortingAlgorithms();
 	RunGraphAlgorithms();
 	RunLinkedListAlgorithms();
-
+	RunLinkedListAlgorithmDeleteNode();
 	return 0;
 }
 

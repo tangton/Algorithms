@@ -16,5 +16,6 @@ namespace algorithms
 		void SetNext(std::shared_ptr<LinkedListNode> nextNode);
 
 		static std::shared_ptr<LinkedListNode> ReverseLinkedList(std::shared_ptr<LinkedListNode>& head);
+		static std::shared_ptr<LinkedListNode> DeleteNode(std::shared_ptr<LinkedListNode>& head, int value);
 	};
 }

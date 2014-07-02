@@ -40,3 +40,32 @@ shared_ptr<LinkedListNode> LinkedListNode::ReverseLinkedList(shared_ptr<LinkedLi
 
 	return head;
 }
+
+shared_ptr<LinkedListNode> LinkedListNode::DeleteNode(shared_ptr<LinkedListNode>& head, int value)
+{
+	shared_ptr<LinkedListNode> previous = nullptr;
+	shared_ptr<LinkedListNode> current = head;
+
+	while (current != nullptr)
+	{
+		if (current->GetValue() == value)
+		{
+			if (previous == nullptr)
+			{
+				head = current->GetNext();
+			}
+			else
+			{
+				previous->SetNext(current->GetNext());
+			}
+		}
+		else
+		{
+			previous = current;
+		}
+		
+		current = current->GetNext();
+	}
+
+	return head;
+}
